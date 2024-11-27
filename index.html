@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    <title>Cool Company</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+       @keyframes example1{
+            0%{
+                background-color: rgb(255, 153, 0);
+            }
+            50%{
+                background-color: yellow;
+                
+            }
+            100%{
+                background-color: rgb(255, 166, 0);
+                
+            }
+        }
+
+        @keyframes example2{
+            0%{
+                font-size: small;
+                color:rgb(96,204,250);
+            }
+            100%{
+                font-size: bold;
+                color: white;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <div class="wrapper-inner">
+                <div class="offer ">
+                    <h1 class="offer__title">С помощью нас вы сможете создать то, о чем</h1>
+                    <span class = "offer__span">Желаете!</span>
+                    <p class="offer__text"> Наши возможности и опыт позволят Вам достичь огрмного успеха. Мы верим в вас! И знаем это на 100% Вас не остановить!</p>
+                    <a href="#" class="btn"> Узнать больше...</a>
+                </div>
+                <img class="img1 animate__animated animate__fadeInRight" src="img/header-img.png" alt="picture">
+            </div>
+        </div>
+    </header>
+    <div class="container2">
+        <div class="offer__text2">
+            Что Вам необходимо?
+        </div>
+        <div class="blocks"> 
+            <div class="block">
+                <img class="img" src="img/f3.png" alt="picture2">
+                <p class="block__name">Первый блок</p>
+                <p class="block__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at </p>
+            </div>
+            <div class="block">
+                <img class="img" src="img/f4.png" alt="picture3">
+                <p class="block__name">Второй блок</p>
+                <p class="block__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at </p>
+            </div>
+            <div class="block">
+                <img class="img" src="img/f5.png" alt="picture4">
+                <p class=block__name>Третий блок</p>
+                <p class="block__info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class = "call__form2">
+            <div class="call__text3 animate__animated animate__fadeInRightBig">Подписка на рассылку</div>
+            <form class="form" action="#">
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Имя</div>
+                <input class="animate__animated animate__fadeInRightBig" type="text" id="firstname" name="firstname" placeholder="Имя" onchange="checkFirstName()"> <br>
+                <div>
+                    <span id="first_Check"></span>
+                </div>
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Фамилия</div>
+                <input class="animate__animated animate__fadeInRightBig" type="text" id="lastname" name="lastname" placeholder="Фамилия"  onblur="checkLastName()"> <br>
+                <div>
+                    <span id="last_Check"></span>
+                </div>
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Ваша почта</div>
+                <input class="animate__animated animate__fadeInRightBig" type="text" id="mail" name = "mail" placeholder="Email@mail.com"  onblur="checkMail()">  <br>
+                <div>
+                    <span id="mail_Check"></span>
+                </div>
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Ваш телефон</div>
+                <input class="animate__animated animate__fadeInRightBig" type="text"  id="phone" name = "phone" placeholder="000-000-00-00 (без +7)" onblur="checkPhone()">  <br>
+                <div>
+                    <span id="phone_Check"></span>
+                </div>
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Удобное время</div>
+                <input class="animate__animated animate__fadeInRightBig" type="time" id="time" name = "time" placeholder="Удобное время"> <br>
+                <div class="call__text2 animate__animated animate__fadeInRightBig">Количество рассылок в месяц</div>
+                <input class="animate__animated animate__fadeInRightBig" id="quantity" id="number" type="number" placeholder="От 1 до 4 в месяц" onblur="checkCount()"><br>
+                <div>
+                    <span id="count_Check"></span>
+                </div>
+                <div class="col-md-12 order animate__animated animate__fadeInRightBig"><span id="sendOrder" onclick="outputData();">Подписаться</span>
+                </div>
+                <div>
+                    <div>
+                        <span class="call_text2 " id="summary"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="container3">
+        <div class = "call__form">
+            <div class="call__text animate__animated animate__flipInX">Форма заказа обратного звонка</div>
+            <form class="form" action="#">
+                <input class="animate__animated animate__flipInX" name="name" type="text" placeholder="Имя"  required maxlength="30"> <br>
+                <input class="animate__animated animate__flipInX" type="email" name="mail" placeholder="Введите свой email" required  minlength="3" maxlength="30"> <br>
+                <input class="animate__animated animate__flipInX" type="number" name = "phone" placeholder="Введите ваш телефон" required  maxlength="30"> <br>
+                <input class="animate__animated animate__flipInX" type="text" name = "provide" placeholder="Какая услуга вас интересует?" required minlength="5" maxlength="30">  <br>
+                <button type="submit" class="btn2 animate__animated animate__flipInX">Отправить вопрос!</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-text">
+                © Всё на этом сайте защищено
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>
